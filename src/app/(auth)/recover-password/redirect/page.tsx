@@ -1,4 +1,3 @@
-import images from '@/assets/images'
 import {
   Card,
   CardHeader,
@@ -6,30 +5,32 @@ import {
   CardContent,
   CardDescription
 } from '@/main/ui/card'
-import { FormRecoverPassword } from '@/modules/auth'
+import images from '@/assets/images'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
+import { Button } from '@/main/ui/button'
 
-export const metadata = {
-  title: 'Recuperar senha - Pontua'
-}
-
-export default function RecoverPassword() {
+export default function RecoverRedirect() {
   return (
     <div className="flex w-full items-center justify-around">
       <Image src={images.building} alt="building" />
       <Card className="h-[433px] w-[380px] rounded-3xl">
         <CardHeader>
           <CardTitle className="font-epilogue text-4xl text-blue-600">
-            Bem-vindo<span className="text-orange-700">.</span>
+            Tudo Certo <span className="text-orange-700">;)</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
           <CardDescription className="font-epilogue text-base font-light text-gray-500">
-            Informe o e-mail do seu cadastro. Nós estaremos realizando o envio de um
-            link com as instruções para você redefinir a sua senha.
+            Foi enviado um e-mail para você com instruções de como redefinir a sua
+            senha.
           </CardDescription>
-          <FormRecoverPassword />
+          <Link href="/login">
+            <Button className="h-16 w-full bg-blue-800 text-2xl font-bold">
+              voltar para o login
+            </Button>
+          </Link>
         </CardContent>
       </Card>
     </div>

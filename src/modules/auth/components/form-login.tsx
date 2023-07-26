@@ -49,7 +49,7 @@ export const FormLogin = () => {
       </div>
       <Button
         type="submit"
-        className="flex w-full items-center justify-center bg-blue-800 text-2xl font-bold hover:bg-blue-600"
+        className="flex h-16 w-full items-center justify-center bg-blue-800 text-2xl font-bold hover:bg-blue-600"
       >
         entrar <LogIn />
       </Button>

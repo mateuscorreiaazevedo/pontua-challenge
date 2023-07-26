@@ -1,22 +1,19 @@
 import images from '@/assets/images'
 import {
   Card,
-  CardContent,
-  CardDescription,
   CardHeader,
-  CardTitle
+  CardTitle,
+  CardContent,
+  CardDescription
 } from '@/main/ui/card'
-import { FormLogin } from '@/modules/auth'
-import { ShieldQuestion } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 
 export const metadata = {
-  title: 'Login - Pontua'
+  title: 'Recuperar senha - Pontua'
 }
 
-export default function Login() {
+export default function RecoverPassword() {
   return (
     <div className="flex w-full items-center justify-around">
       <Image src={images.building} alt="building" />
@@ -28,15 +25,9 @@ export default function Login() {
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
           <CardDescription className="font-epilogue text-base font-light text-gray-500">
-            informe as suas credenciais de acesso ao portal
+            Informe o e-mail do seu cadastro. Nós estaremos realizando o envio de um
+            link com as instruções para você redefinir a sua senha.
           </CardDescription>
-          <FormLogin />
-          <Link
-            href="/recover-password"
-            className="mt-2 flex items-center justify-center gap-2 self-end text-sm text-orange-700"
-          >
-            <ShieldQuestion size={18} /> Esqueceu a senha?
-          </Link>
         </CardContent>
       </Card>
     </div>

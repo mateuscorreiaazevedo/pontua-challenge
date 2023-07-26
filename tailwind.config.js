@@ -29,6 +29,7 @@ module.exports = {
         gray: {
           background: '#f5f6f8',
           100: '#eaecf0',
+          400: '#B7B7B7',
           500: '#777777'
         },
         divider: '#ebeff2',

@@ -1,22 +1,30 @@
-import { Roboto_Flex as Roboto } from 'next/font/google'
+import { Epilogue, Inter } from 'next/font/google'
 import '../assets/styles/globals.css'
 import { ReactNode } from 'react'
 
-const roboto = Roboto({
+const epilogue = Epilogue({
   subsets: ['latin'],
-  variable: '--font-roboto',
+  variable: '--font-epilogue',
+  fallback: ['sans serif']
+})
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
   fallback: ['sans serif']
 })
 
 export const metadata = {
-  title: '@mateuscorreiaazevedo',
-  description: 'My boilerplate using Next.js 13. Powered by Mateus Azevedo'
+  title: 'Pontua - Teste',
+  description:
+    'Aplicação para teste de processo seletivo, para desenvolvedor front-end pleno pela Pontua.'
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
-      <body className={`${roboto.variable} min-h-screen w-full font-roboto`}>
+      <body
+        className={`${inter.variable} ${epilogue.variable} min-h-screen w-full font-inter`}
+      >
         {children}
       </body>
     </html>

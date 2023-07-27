@@ -27,6 +27,7 @@ const SearchBar = () => {
 
   function handleSelectAgent(id: number) {
     router.push(`/agent/${id}`)
+    setSearch('')
   }
 
   return (

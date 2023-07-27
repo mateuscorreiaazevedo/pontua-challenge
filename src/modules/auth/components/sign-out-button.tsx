@@ -14,10 +14,7 @@ export const SignOutButton = () => {
   }
 
   return (
-    <Button
-      onClick={handleSignOut}
-      className="bg-blue-800 font-epilogue hover:bg-blue-600"
-    >
+    <Button onClick={handleSignOut} className="bg-blue-800 hover:bg-blue-600">
       Sair
     </Button>
   )

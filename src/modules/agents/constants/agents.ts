@@ -1,3 +1,4 @@
 export default {
-  getAllAgents: '/characters'
+  getAllAgents: '/characters',
+  getAgentById: '/characters/CHARACTER_ID'
 }

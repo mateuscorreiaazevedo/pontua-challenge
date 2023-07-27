@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
       <body
-        className={`${inter.variable} ${epilogue.variable} min-h-screen w-full font-inter`}
+        className={`${inter.variable} ${epilogue.variable} min-h-screen w-full font-epilogue`}
       >
         <Toaster position="top-right" />
         {children}

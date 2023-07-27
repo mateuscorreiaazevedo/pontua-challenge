@@ -29,13 +29,13 @@ export default async function SelectAgent() {
       <Image src={images.building} alt="building" />
       <Card className="h-[320px] w-[405px] rounded-3xl">
         <CardHeader>
-          <CardTitle className="font-epilogue text-4xl text-blue-600">
+          <CardTitle className="text-4xl text-blue-600">
             Selecione o seu agente mais legal
             <span className="text-orange-700">.</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
-          <CardDescription className="font-epilogue text-base font-light text-gray-500">
+          <CardDescription className="text-base font-light text-gray-500">
             Tenha a visão completa do seu agente.
           </CardDescription>
           <FormSelectAgent data={data!.results} />

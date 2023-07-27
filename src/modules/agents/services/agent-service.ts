@@ -17,13 +17,37 @@ class AgentService {
       params: {
         ...(offset && { offset }),
         ...(limit && { limit }),
-        ...(name && { name })
+        ...(name && { nameStartsWith: name })
       }
     })
 
     switch (response.statusCode) {
       case 200:
         return response.body?.data
+      case 401:
+        throw new Error(response.body?.message)
+      case 403:
+        throw new Error(response.body?.message)
+      case 405:
+        throw new Error(response.body?.message)
+      case 409:
+        throw new Error(response.body?.message)
+      default:
+        throw new Error('Falha no sistema. Por favor, tente novamente mais tarde')
+    }
+  }
+
+  async getAgentById(id: number) {
+    const response = await s.request<{
+      data: AgentDataResponse
+      message?: string
+    }>({
+      url: c.getAgentById.replace('CHARACTER_ID', id.toString())
+    })
+
+    switch (response.statusCode) {
+      case 200:
+        return response.body?.data.results[0]
       case 401:
         throw new Error(response.body?.message)
       case 403:

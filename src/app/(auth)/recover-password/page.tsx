@@ -20,12 +20,12 @@ export default function RecoverPassword() {
       <Image src={images.building} alt="building" />
       <Card className="h-[433px] w-[380px] rounded-3xl">
         <CardHeader>
-          <CardTitle className="font-epilogue text-4xl text-blue-600">
+          <CardTitle className="text-4xl text-blue-600">
             Bem-vindo<span className="text-orange-700">.</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
-          <CardDescription className="font-epilogue text-base font-light text-gray-500">
+          <CardDescription className="text-base font-light text-gray-500">
             Informe o e-mail do seu cadastro. Nós estaremos realizando o envio de um
             link com as instruções para você redefinir a sua senha.
           </CardDescription>

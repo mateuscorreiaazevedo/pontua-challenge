@@ -16,7 +16,7 @@ export const NavLink: React.FC<Props> = ({ asAnchor = false, children, link }) =
     return (
       <a
         href={link}
-        className="flex w-full items-center justify-start gap-2 rounded-md px-4 py-2 font-epilogue font-semibold text-black hover:bg-gray-background/20 active:bg-gray-background"
+        className="flex w-full items-center justify-start gap-2 rounded-md px-4 py-2 font-semibold text-black hover:bg-gray-background/20 active:bg-gray-background"
       >
         {children}
       </a>
@@ -26,7 +26,7 @@ export const NavLink: React.FC<Props> = ({ asAnchor = false, children, link }) =
   return (
     <Link
       href={link}
-      className={`flex w-full items-center justify-start gap-2 rounded-md  px-4 py-2 font-epilogue font-semibold text-black ${
+      className={`flex w-full items-center justify-start gap-2 rounded-md  px-4 py-2 font-semibold text-black ${
         path === link ? 'bg-gray-background' : 'hover:bg-gray-background/20'
       }`}
     >

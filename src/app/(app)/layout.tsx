@@ -1,10 +1,10 @@
-import images from '@/assets/images'
-import { NavLink } from '@/main/components'
-import { Separator } from '@/main/ui/separator'
 import { CornerUpLeft, LayoutDashboard, User } from 'lucide-react'
+import { Separator } from '@/main/ui/separator'
+import { NavLink, SearchBar } from '@/modules/core'
+import images from '@/assets/images'
+import { ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ReactNode } from 'react'
 
 export default function AppLayout({ children }: { children: ReactNode }) {
   return (
@@ -14,7 +14,7 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           <Link href="/">
             <Image
               src={images.pontuaLogo}
-              alt="Pontua Logo"
+              alt="Logo da Pontua"
               className="aspect-video w-28"
             />
           </Link>
@@ -32,7 +32,12 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           </NavLink>
         </nav>
       </aside>
-      <article className="flex-1">{children}</article>
+      <article className="flex-1">
+        <header className="sticky top-0 flex h-[60px] w-full items-center justify-center border-b border-divider px-6 shadow-sm">
+          <SearchBar />
+        </header>
+        <section className="mt-4 px-2">{children}</section>
+      </article>
     </main>
   )
 }

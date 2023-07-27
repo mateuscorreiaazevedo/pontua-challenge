@@ -17,12 +17,12 @@ export default function RecoverRedirect() {
       <Image src={images.building} alt="building" />
       <Card className="h-[433px] w-[380px] rounded-3xl">
         <CardHeader>
-          <CardTitle className="font-epilogue text-4xl text-blue-600">
+          <CardTitle className="text-4xl text-blue-600">
             Tudo Certo <span className="text-orange-700">;)</span>
           </CardTitle>
         </CardHeader>
         <CardContent className="flex flex-col gap-4">
-          <CardDescription className="font-epilogue text-base font-light text-gray-500">
+          <CardDescription className="text-base font-light text-gray-500">
             Foi enviado um e-mail para você com instruções de como redefinir a sua
             senha.
           </CardDescription>

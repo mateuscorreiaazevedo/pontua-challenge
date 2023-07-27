@@ -26,7 +26,7 @@ const SearchBar = () => {
   }, [debouncedValue])
 
   function handleSelectAgent(id: number) {
-    router.push(`/agent/${id}`)
+    router.push(`/profile/${id}`)
     setSearch('')
   }
 

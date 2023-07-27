@@ -13,6 +13,7 @@ import {
 } from '@/main/ui/select'
 import { agentService } from '@/modules/agents'
 import { User } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import toast from 'react-hot-toast'
@@ -31,6 +32,7 @@ export const FormSelectAgent: React.FC<Props> = ({ data }) => {
   const [loading, setLoading] = React.useState(false)
   const { ref, inView } = useInView({ threshold: 0 })
   const [offset, setOffset] = React.useState(20)
+  const router = useRouter()
   const { handleSubmit, setValue, watch } = useForm<FormProps>({
     defaultValues: { agent: '' }
   })
@@ -51,7 +53,12 @@ export const FormSelectAgent: React.FC<Props> = ({ data }) => {
   }
 
   const handleSelectAgent: SubmitHandler<FormProps> = async data => {
-    toast(data.agent)
+    try {
+      const response = await agentService.getAllAgents({ name: data.agent })
+      router.push(`/profile/${response?.results[0].id}`)
+    } catch (error) {
+      toast.error((error as any).message)
+    }
   }
 
   React.useEffect(() => {

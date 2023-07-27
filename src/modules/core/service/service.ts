@@ -1,5 +1,6 @@
 import axios, { AxiosHeaders, AxiosInstance, AxiosResponse } from 'axios'
-import { env } from '@/main/config'
+import { coreConstants as c } from '..'
+import CryptoJS from 'crypto-js'
 
 type HttpRequest = {
   url: string
@@ -14,10 +15,13 @@ type HttpResponse<T> = {
   body?: T
 }
 
-export class Service {
+const ts = new Date().getTime().toString()
+const hash = CryptoJS.MD5(ts + c.privateKey + c.publicKey).toString()
+
+class Service {
   private api: AxiosInstance
 
-  constructor(private readonly baseURL: string = env.baseUrl) {
+  constructor(private readonly baseURL: string = c.baseApi) {
     this.api = axios.create({
       baseURL: this.baseURL
     })
@@ -32,8 +36,16 @@ export class Service {
         url,
         method,
         data,
-        params,
-        headers
+        params: {
+          ts,
+          apikey: c.publicKey as string,
+          hash,
+          ...params
+        },
+        headers: {
+          'Content-Type': 'application/json',
+          ...headers
+        }
       })
     } catch (error) {
       response = (error as any).response
@@ -45,3 +57,4 @@ export class Service {
     }
   }
 }
+export const service = new Service()

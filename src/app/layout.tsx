@@ -1,6 +1,7 @@
 import { Epilogue, Inter } from 'next/font/google'
 import '../assets/styles/globals.css'
 import { ReactNode } from 'react'
+import { Toaster } from 'react-hot-toast'
 
 const epilogue = Epilogue({
   subsets: ['latin'],
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${inter.variable} ${epilogue.variable} min-h-screen w-full font-inter`}
       >
+        <Toaster position="top-right" />
         {children}
       </body>
     </html>

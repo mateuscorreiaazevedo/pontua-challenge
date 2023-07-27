@@ -5,6 +5,7 @@ import {
   CardHeader,
   CardTitle
 } from '@/main/ui/card'
+import { SignOutButton } from '@/modules/auth'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         </CardHeader>
         <CardContent>
           <CardDescription>Hello</CardDescription>
+          <SignOutButton />
         </CardContent>
       </Card>
     </div>

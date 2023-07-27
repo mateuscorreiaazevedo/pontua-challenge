@@ -1,18 +1,23 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
+import { Button } from '@/main/ui/button'
 import { useForm } from 'react-hook-form'
 import { Input } from '@/main/ui/input'
 import { AtSign } from 'lucide-react'
+import toast from 'react-hot-toast'
 import React from 'react'
-import { Button } from '@/main/ui/button'
-import { useRouter } from 'next/navigation'
 
 export const FormRecoverPassword = () => {
   const { handleSubmit, register } = useForm()
   const router = useRouter()
 
   const handleRecoverPassword = async () => {
-    router.push('/recover-password/redirect')
+    try {
+      router.push('/recover-password/redirect')
+    } catch (error) {
+      toast.error((error as any).message)
+    }
   }
 
   return (

@@ -1,7 +1,9 @@
 import pontuaWhite from './pontua-white.svg'
+import pontuaLogo from './pontua-logo.svg'
 import building from './building.svg'
 
 export default {
-  building,
-  pontuaWhite
+  pontuaWhite,
+  pontuaLogo,
+  building
 }

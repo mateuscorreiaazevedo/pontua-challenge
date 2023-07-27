@@ -18,33 +18,30 @@ export const FormLogin = () => {
     <form onSubmit={handleSubmit(handleLogin)} className="flex flex-1 flex-col gap-4">
       <div className="relative">
         <Input
-          className="h-12 w-full font-semibold text-blue-500 placeholder:font-normal placeholder:text-gray-400 focus:border-blue-500 focus-visible:ring-0 focus-visible:ring-offset-0"
+          type="email"
+          className="peer/email h-12 w-full font-semibold text-blue-500 placeholder:font-normal placeholder:text-gray-400 focus:border-blue-500 focus-visible:ring-0 focus-visible:ring-offset-0"
           {...register('email')}
           placeholder="Informe seu e-mail"
         />
         <AtSign
           size={17}
-          className="absolute right-2 top-1/2 -translate-y-1/2 font-light text-blue-500"
+          className="absolute right-2 top-1/2 -translate-y-1/2 font-light text-gray-400 transition peer-focus/email:text-blue-500"
         />
       </div>
       <div className="relative">
         <Input
           id="password"
           type={showPassword ? 'text' : 'password'}
-          className="h-12 w-full font-semibold text-blue-500 placeholder:font-normal placeholder:text-gray-400 focus:border-blue-500 focus-visible:ring-0 focus-visible:ring-offset-0"
-          {...register('email')}
+          className="peer/password h-12 w-full font-semibold text-blue-500 placeholder:font-normal placeholder:text-gray-400 focus:border-blue-500 focus-visible:ring-0 focus-visible:ring-offset-0"
+          {...register('password')}
           placeholder="Informe sua senha"
         />
         <label
           htmlFor="password"
           onClick={() => setShowPassword(state => !state)}
-          className="absolute right-2 top-1/2 -translate-y-1/2"
+          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 transition peer-focus/password:text-blue-500"
         >
-          {showPassword ? (
-            <EyeOff className="text-blue-500" size={17} />
-          ) : (
-            <Eye className="text-gray-400" size={17} />
-          )}
+          {showPassword ? <EyeOff size={17} /> : <Eye size={17} />}
         </label>
       </div>
       <Button

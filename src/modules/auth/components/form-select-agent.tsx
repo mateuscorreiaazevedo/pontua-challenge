@@ -84,7 +84,9 @@ export const FormSelectAgent: React.FC<Props> = ({ data }) => {
                     {item.name.slice(1, 2)}
                   </AvatarFallback>
                 </Avatar>
-                <SelectLabel className="font-semibold">{item.name}</SelectLabel>
+                <SelectLabel className="max-w-[300px] truncate font-semibold">
+                  {item.name}
+                </SelectLabel>
               </SelectItem>
             ))}
             {loading && (

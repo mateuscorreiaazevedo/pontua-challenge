@@ -7,9 +7,15 @@ type Props = {
   asAnchor?: boolean
   children: React.ReactNode
   link: string
+  asBlank?: boolean
 }
 
-export const NavLink: React.FC<Props> = ({ asAnchor = false, children, link }) => {
+export const NavLink: React.FC<Props> = ({
+  asAnchor = false,
+  children,
+  link,
+  asBlank
+}) => {
   const path = usePathname()
   const params = useParams()
   let verifyActive
@@ -24,7 +30,9 @@ export const NavLink: React.FC<Props> = ({ asAnchor = false, children, link }) =
     return (
       <a
         href={link}
+        target={asBlank ? '_blank' : ''}
         className="flex w-full items-center justify-start gap-2 rounded-md px-4 py-2 font-semibold text-black hover:bg-gray-background active:bg-gray-background/90"
+        rel="noreferrer"
       >
         {children}
       </a>

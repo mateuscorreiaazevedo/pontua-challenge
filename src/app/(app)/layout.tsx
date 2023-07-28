@@ -1,4 +1,11 @@
-import { CornerUpLeft, LayoutDashboard, User } from 'lucide-react'
+import {
+  CornerUpLeft,
+  Github,
+  Instagram,
+  LayoutDashboard,
+  Linkedin,
+  User
+} from 'lucide-react'
 import { Separator, NavLink, SearchBar } from '@/modules/core'
 import images from '@/assets/images'
 import { ReactNode } from 'react'
@@ -25,11 +32,32 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           <NavLink link="/profile">
             <User /> Perfil
           </NavLink>
-          <Separator className="w-full" />
-          <NavLink link="/api/logout" asAnchor>
-            <CornerUpLeft /> Sair
-          </NavLink>
         </nav>
+        <Separator className="mb-2 w-full" />
+        <NavLink link="/api/logout" asAnchor>
+          <CornerUpLeft /> Sair
+        </NavLink>
+        <Separator className="mt-2 w-full" />
+        <ul className="flex h-full w-full flex-1 flex-col items-start justify-end px-6 py-4">
+          <NavLink
+            asBlank
+            link="https://linkedin.com/in/mateuscorreiaazevedo"
+            asAnchor
+          >
+            <Linkedin /> Linkedin
+          </NavLink>
+          <NavLink asBlank link="https://github.com/mateuscorreiaazevedo" asAnchor>
+            <Github /> Github
+          </NavLink>
+          <NavLink asBlank link="https://instagram.com/mateuscorreiaazevedo" asAnchor>
+            <Instagram /> Instagram
+          </NavLink>
+        </ul>
+        <footer className="px-6 py-4 text-center text-sm font-semibold">
+          <a href="https://mateusdev.com.br" target="_blank" rel="noreferrer">
+            mateusdev &copy; - 2023
+          </a>
+        </footer>
       </aside>
       <article className="flex-1">
         <header className="sticky top-0 flex h-[60px] w-full items-center justify-center border-b border-divider px-6 shadow-sm">

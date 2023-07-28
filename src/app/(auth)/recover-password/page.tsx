@@ -5,8 +5,10 @@ import {
   CardTitle,
   CardContent,
   CardDescription
-} from '@/modules/core/card'
+} from '@/modules/core'
 import { FormRecoverPassword } from '@/modules/auth'
+import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
 import Image from 'next/image'
 import React from 'react'
 
@@ -15,6 +17,12 @@ export const metadata = {
 }
 
 export default function RecoverPassword() {
+  const token = cookies().get('pontua.token')
+
+  if (token) {
+    redirect('/select-agent')
+  }
+
   return (
     <div className="flex w-full items-center justify-around">
       <Image src={images.building} alt="building" />

@@ -1,13 +1,15 @@
-import images from '@/assets/images'
+import { ShieldQuestion } from 'lucide-react'
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle
-} from '@/modules/core/card'
+} from '@/modules/core'
 import { FormLogin } from '@/modules/auth'
-import { ShieldQuestion } from 'lucide-react'
+import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
+import images from '@/assets/images'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
@@ -17,6 +19,12 @@ export const metadata = {
 }
 
 export default function Login() {
+  const token = cookies().get('pontua.token')
+
+  if (token) {
+    redirect('/select-agent')
+  }
+
   return (
     <div className="flex w-full items-center justify-around">
       <Image src={images.building} alt="building" />

@@ -22,6 +22,7 @@ export const CardViewAgent: React.FC<Props> = ({ agent }) => {
         <A.AvatarImage
           src={`${agent?.thumbnail.path}.${agent?.thumbnail.extension}`}
           alt={agent?.name}
+          className="object-contain"
         />
       </A.Avatar>
       <div>

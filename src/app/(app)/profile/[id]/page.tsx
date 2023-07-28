@@ -1,4 +1,9 @@
-import { CardViewAgent, agentService } from '@/modules/agents'
+import {
+  CardViewAgent,
+  TabContentsAgent,
+  agentService,
+  tabList
+} from '@/modules/agents'
 import toast from 'react-hot-toast'
 import * as T from '@/modules/core'
 import Link from 'next/link'
@@ -9,29 +14,6 @@ type Props = {
     id: number
   }
 }
-
-const tabList = [
-  {
-    value: 'viewAgent',
-    label: 'Visão Geral'
-  },
-  {
-    value: 'teams',
-    label: 'Teams'
-  },
-  {
-    value: 'powers',
-    label: 'Powers'
-  },
-  {
-    value: 'species',
-    label: 'Species'
-  },
-  {
-    value: 'authors',
-    label: 'Authors'
-  }
-]
 
 export async function generateMetadata({ params }: Props) {
   const { id } = params
@@ -71,10 +53,18 @@ export default async function Agent({ params }: Props) {
         <T.TabsContent value="viewAgent">
           <CardViewAgent agent={agent} />
         </T.TabsContent>
-        <T.TabsContent value="teams"></T.TabsContent>
-        <T.TabsContent value="powers"></T.TabsContent>
-        <T.TabsContent value="species"></T.TabsContent>
-        <T.TabsContent value="authors"></T.TabsContent>
+        <T.TabsContent value="comics">
+          <TabContentsAgent content="comics" agent={agent} />
+        </T.TabsContent>
+        <T.TabsContent value="series">
+          <TabContentsAgent content="series" agent={agent} />
+        </T.TabsContent>
+        <T.TabsContent value="events">
+          <TabContentsAgent agent={agent} content="events" />
+        </T.TabsContent>
+        <T.TabsContent value="stories">
+          <TabContentsAgent agent={agent} content="stories" />
+        </T.TabsContent>
       </T.Tabs>
     </section>
   )

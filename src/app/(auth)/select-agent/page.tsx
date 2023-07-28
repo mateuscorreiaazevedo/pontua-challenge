@@ -5,7 +5,7 @@ import {
   CardTitle,
   CardContent,
   CardDescription
-} from '@/modules/core/components/ui/card'
+} from '@/modules/core'
 import { agentService } from '@/modules/agents'
 import { FormSelectAgent } from '@/modules/auth'
 import Image from 'next/image'

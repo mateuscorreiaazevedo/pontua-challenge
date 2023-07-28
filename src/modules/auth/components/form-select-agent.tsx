@@ -3,10 +3,8 @@
 import {
   Avatar,
   AvatarFallback,
-  AvatarImage
-} from '@/modules/core/components/ui/avatar'
-import { Button } from '@/modules/core/components/ui/button'
-import {
+  AvatarImage,
+  Button,
   Select,
   SelectTrigger,
   SelectGroup,
@@ -14,7 +12,7 @@ import {
   SelectContent,
   SelectValue,
   SelectLabel
-} from '@/modules/core/components/ui/select'
+} from '@/modules/core'
 import { agentService } from '@/modules/agents'
 import { User } from 'lucide-react'
 import { useRouter } from 'next/navigation'

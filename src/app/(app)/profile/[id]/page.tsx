@@ -1,8 +1,8 @@
 import { CardViewAgent, agentService } from '@/modules/agents'
-import * as T from '@/modules/core/components/ui/tabs'
+import toast from 'react-hot-toast'
+import * as T from '@/modules/core'
 import Link from 'next/link'
 import React from 'react'
-import toast from 'react-hot-toast'
 
 type Props = {
   params: {
@@ -54,7 +54,7 @@ export default async function Agent({ params }: Props) {
   return (
     <section>
       <h1 className="text-2xl text-blue-600">
-        <Link href="/" className="font-bold">
+        <Link href="/select-agent" className="font-bold">
           Perfil
         </Link>
         <span className="mx-1 font-bold text-orange-500">/</span>

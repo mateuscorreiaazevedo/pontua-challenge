@@ -4,12 +4,12 @@ import {
   CardTitle,
   CardContent,
   CardDescription
-} from '@/modules/core/components/ui/card'
+} from '@/modules/core/card'
 import images from '@/assets/images'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Button } from '@/modules/core/components/ui/button'
+import { Button } from '@/modules/core/button'
 
 export default function RecoverRedirect() {
   return (

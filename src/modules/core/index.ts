@@ -4,5 +4,6 @@ export { default as coreConstants } from './constants/core'
 export * from './components/nav-link'
 export * from './hooks/use-debounce'
 export * from './service/service'
+export * from './components/ui'
 
 export const SearchBar = lazy(() => import('./components/search-bar'))

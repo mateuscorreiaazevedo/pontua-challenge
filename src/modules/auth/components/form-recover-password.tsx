@@ -1,9 +1,8 @@
 'use client'
 
+import { Button, Input } from '@/modules/core'
 import { useRouter } from 'next/navigation'
-import { Button } from '@/modules/core/components/ui/button'
 import { useForm } from 'react-hook-form'
-import { Input } from '@/modules/core/components/ui/input'
 import { AtSign } from 'lucide-react'
 import toast from 'react-hot-toast'
 import React from 'react'

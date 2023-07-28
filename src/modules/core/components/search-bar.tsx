@@ -1,16 +1,12 @@
 'use client'
-import { Search } from 'lucide-react'
-import * as C from '@reach/combobox'
-import React from 'react'
-import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage
-} from '@/modules/core/components/ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from '@/modules/core'
 import { useDebounce } from '../hooks/use-debounce'
 import { agentService } from '@/modules/agents'
 import { useRouter } from 'next/navigation'
+import { Search } from 'lucide-react'
+import * as C from '@reach/combobox'
 import toast from 'react-hot-toast'
+import React from 'react'
 
 const SearchBar = () => {
   const [search, setSearch] = React.useState('')

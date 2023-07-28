@@ -7,3 +7,4 @@ export * from './service/service'
 export * from './components/ui'
 
 export const SearchBar = lazy(() => import('./components/search-bar'))
+export const Pagination = lazy(() => import('./components/pagination'))

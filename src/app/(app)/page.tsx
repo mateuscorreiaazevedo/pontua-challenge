@@ -4,7 +4,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle
-} from '@/main/ui/card'
+} from '@/modules/core/components/ui/card'
 import { SignOutButton } from '@/modules/auth'
 
 export default function Home() {

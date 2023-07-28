@@ -5,7 +5,7 @@ import {
   CardTitle,
   CardContent,
   CardDescription
-} from '@/main/ui/card'
+} from '@/modules/core/components/ui/card'
 import { FormRecoverPassword } from '@/modules/auth'
 import Image from 'next/image'
 import React from 'react'

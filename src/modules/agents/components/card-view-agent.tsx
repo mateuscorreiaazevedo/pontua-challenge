@@ -4,8 +4,8 @@ import {
   CardTitle,
   CardContent,
   CardDescription
-} from '@/main/ui/card'
-import * as A from '@/main/ui/avatar'
+} from '@/modules/core/components/ui/card'
+import * as A from '@/modules/core/components/ui/avatar'
 import React from 'react'
 
 type Props = {

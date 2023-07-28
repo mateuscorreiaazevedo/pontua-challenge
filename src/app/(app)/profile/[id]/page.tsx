@@ -1,5 +1,5 @@
 import { CardViewAgent, agentService } from '@/modules/agents'
-import * as T from '@/main/ui/tabs'
+import * as T from '@/modules/core/components/ui/tabs'
 import Link from 'next/link'
 import React from 'react'
 import toast from 'react-hot-toast'

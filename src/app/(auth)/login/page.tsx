@@ -5,7 +5,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle
-} from '@/main/ui/card'
+} from '@/modules/core/components/ui/card'
 import { FormLogin } from '@/modules/auth'
 import { ShieldQuestion } from 'lucide-react'
 import Image from 'next/image'

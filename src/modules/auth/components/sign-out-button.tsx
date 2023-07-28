@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { Button } from '@/main/ui/button'
+import { Button } from '@/modules/core/components/ui/button'
 import axios from 'axios'
 import React from 'react'
 

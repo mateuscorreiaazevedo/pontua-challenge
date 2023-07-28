@@ -1,7 +1,11 @@
 'use client'
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/main/ui/avatar'
-import { Button } from '@/main/ui/button'
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage
+} from '@/modules/core/components/ui/avatar'
+import { Button } from '@/modules/core/components/ui/button'
 import {
   Select,
   SelectTrigger,
@@ -10,7 +14,7 @@ import {
   SelectContent,
   SelectValue,
   SelectLabel
-} from '@/main/ui/select'
+} from '@/modules/core/components/ui/select'
 import { agentService } from '@/modules/agents'
 import { User } from 'lucide-react'
 import { useRouter } from 'next/navigation'

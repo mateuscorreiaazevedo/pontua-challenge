@@ -1,5 +1,5 @@
 import { CornerUpLeft, LayoutDashboard, User } from 'lucide-react'
-import { Separator } from '@/main/ui/separator'
+import { Separator } from '@/modules/core/components/ui/separator'
 import { NavLink, SearchBar } from '@/modules/core'
 import images from '@/assets/images'
 import { ReactNode } from 'react'

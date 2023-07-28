@@ -2,7 +2,11 @@
 import { Search } from 'lucide-react'
 import * as C from '@reach/combobox'
 import React from 'react'
-import { Avatar, AvatarFallback, AvatarImage } from '@/main/ui/avatar'
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage
+} from '@/modules/core/components/ui/avatar'
 import { useDebounce } from '../hooks/use-debounce'
 import { agentService } from '@/modules/agents'
 import { useRouter } from 'next/navigation'

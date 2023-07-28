@@ -1,4 +1,4 @@
-import { service as s } from '@/modules/core'
+import { marvelService as s } from '@/modules/core'
 import { agentConstants as c } from '..'
 
 type GetAllAgentsProps = {

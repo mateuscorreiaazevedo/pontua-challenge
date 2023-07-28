@@ -18,10 +18,10 @@ type HttpResponse<T> = {
 const ts = new Date().getTime().toString()
 const hash = CryptoJS.MD5(ts + c.privateKey + c.publicKey).toString()
 
-class Service {
+class MarvelService {
   private api: AxiosInstance
 
-  constructor(private readonly baseURL: string = 'http://localhost:3000/api') {
+  constructor(private readonly baseURL: string = c.baseApi) {
     this.api = axios.create({
       baseURL: this.baseURL
     })
@@ -57,4 +57,4 @@ class Service {
     }
   }
 }
-export const service = new Service()
+export const marvelService = new MarvelService()

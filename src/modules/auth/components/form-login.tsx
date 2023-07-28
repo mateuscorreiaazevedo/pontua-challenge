@@ -1,22 +1,22 @@
 'use client'
 
 import { AtSign, Eye, EyeOff, LogIn } from 'lucide-react'
+import { authService } from '../services/auth-service'
+import { Button, Input } from '@/modules/core'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
-import { Button, Input } from '@/modules/core'
 import toast from 'react-hot-toast'
-import axios from 'axios'
 import React from 'react'
 
 export const FormLogin = () => {
   const [showPassword, setShowPassword] = React.useState(false)
-  const { handleSubmit, register } = useForm()
+  const { handleSubmit, register } = useForm<LoginProps>()
   const router = useRouter()
 
-  const handleLogin = async () => {
+  const handleLogin = async ({ email, password }: LoginProps) => {
     try {
-      const response = await axios.post('http://localhost:3000/api/login')
-      toast.success(response.data)
+      const response = await authService.login({ email, password })
+      toast.success(response)
       router.push('/select-agent')
     } catch (error) {
       toast.error((error as any).message)

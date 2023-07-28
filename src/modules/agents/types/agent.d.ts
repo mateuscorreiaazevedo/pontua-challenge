@@ -6,4 +6,7 @@ interface AgentResponse {
     path: string
     extension: string
   }
+  groups?: {
+    name?: string
+  }
 }

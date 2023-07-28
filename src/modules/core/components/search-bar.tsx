@@ -52,7 +52,7 @@ const SearchBar = () => {
             >
               <Avatar>
                 <AvatarFallback className="uppercase">
-                  {item.name.slice(1, 2)}
+                  {item.name.slice(0, 1)}
                 </AvatarFallback>
                 <AvatarImage
                   src={`${item.thumbnail.path}.${item.thumbnail.extension}`}

@@ -60,6 +60,30 @@ class AgentService {
         throw new Error('Falha no sistema. Por favor, tente novamente mais tarde')
     }
   }
+
+  async getTeamsByAgentId(id: number) {
+    const response = await s.request<{
+      data: AgentDataResponse
+      message?: string
+    }>({
+      url: c.getTeamsByAgentId.replace('CHARACTER_ID', id.toString())
+    })
+
+    switch (response.statusCode) {
+      case 200:
+        return response.body?.data.results[0]
+      case 401:
+        throw new Error(response.body?.message)
+      case 403:
+        throw new Error(response.body?.message)
+      case 405:
+        throw new Error(response.body?.message)
+      case 409:
+        throw new Error(response.body?.message)
+      default:
+        throw new Error('Falha no sistema. Por favor, tente novamente mais tarde')
+    }
+  }
 }
 
 export const agentService = new AgentService()

@@ -88,7 +88,7 @@ export const FormSelectAgent: React.FC<Props> = ({ data }) => {
                     src={`${item.thumbnail.path}.${item.thumbnail.extension}`}
                   />
                   <AvatarFallback className="uppercase">
-                    {item.name.slice(1, 2)}
+                    {item.name.slice(0, 1)}
                   </AvatarFallback>
                 </Avatar>
                 <SelectLabel className="max-w-[300px] truncate font-semibold">

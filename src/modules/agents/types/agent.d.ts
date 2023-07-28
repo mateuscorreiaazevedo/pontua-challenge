@@ -6,7 +6,8 @@ interface AgentResponse {
     path: string
     extension: string
   }
-  groups?: {
-    name?: string
-  }
+  comics?: { items: { name: string }[] }
+  series?: { items: { name: string }[] }
+  events?: { items: { name: string }[] }
+  stories?: { items: { name: string }[] }
 }

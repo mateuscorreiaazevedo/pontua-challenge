@@ -6,11 +6,19 @@ export async function POST(req: NextRequest) {
   const body = await req.json()
   const { email, password } = body as LoginProps
 
+  const validateEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
   if (!email.length) {
-    return NextResponse.json('Endereço de email obrigatório.', {
+    return NextResponse.json('Endereço de e-mail obrigatório.', {
       status: 422
     })
   }
+  if (!validateEmail.test(email)) {
+    return NextResponse.json('Endereço de e-mail inválido.', {
+      status: 422
+    })
+  }
+
   if (!password.length) {
     return NextResponse.json('Senha obrigatória.', {
       status: 422
@@ -21,7 +29,7 @@ export async function POST(req: NextRequest) {
 
   if (!verifyUser) {
     return NextResponse.json('Usuário ou senha inválido.', {
-      status: 404
+      status: 422
     })
   }
   const verifyPassword = verifyUser.password === password

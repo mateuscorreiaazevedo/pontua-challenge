@@ -27,7 +27,6 @@ export const FormLogin = () => {
     <form onSubmit={handleSubmit(handleLogin)} className="flex flex-1 flex-col gap-4">
       <div className="relative">
         <Input
-          type="email"
           className="peer/email h-12 w-full font-semibold text-blue-500 placeholder:font-normal placeholder:text-gray-400 focus:border-blue-500 focus-visible:ring-0 focus-visible:ring-offset-0"
           {...register('email')}
           placeholder="Informe seu e-mail"

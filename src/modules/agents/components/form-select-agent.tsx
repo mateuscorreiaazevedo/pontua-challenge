@@ -72,7 +72,7 @@ const FormSelectAgent: React.FC<Props> = ({ data }) => {
   return (
     <form onSubmit={handleSubmit(handleSelectAgent)} className="flex flex-col gap-4">
       <Select onValueChange={value => setValue('agent', value)}>
-        <SelectTrigger className="w=[320px] relative h-11 focus-visible:border-blue-600 focus-visible:outline-4 focus-visible:outline-offset-0 focus-visible:outline-blue-200/10 focus-visible:ring-0 focus-visible:ring-offset-0">
+        <SelectTrigger className="w=[320px] relative h-11 outline-none focus:border focus:border-blue-600 focus:ring-4 focus:ring-blue-200/10 focus:ring-offset-0">
           <SelectValue
             placeholder={
               <div className="flex items-center justify-start gap-4 text-gray-400">

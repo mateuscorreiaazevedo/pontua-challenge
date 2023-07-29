@@ -1,3 +1,4 @@
+import { agentService, FormSelectAgent } from '@/modules/agents'
 import images from '@/assets/images'
 import {
   Card,
@@ -6,8 +7,6 @@ import {
   CardContent,
   CardDescription
 } from '@/modules/core'
-import { agentService } from '@/modules/agents'
-import { FormSelectAgent } from '@/modules/auth'
 import Image from 'next/image'
 import React from 'react'
 

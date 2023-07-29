@@ -25,13 +25,15 @@ const SearchBar = () => {
     })()
   }, [debouncedValue])
 
-  function handleSelectAgent(id: number) {
-    router.push(`/profile/${id}`)
+  async function handleSelectAgent(value: string) {
+    const response = await agentService.getAllAgents({ name: value })
+    const agentId = response?.results[0].id
+    router.push(`/profile/${agentId}`)
     setSearch('')
   }
 
   return (
-    <C.Combobox className="w-full">
+    <C.Combobox className="w-full" onSelect={handleSelectAgent}>
       <div className="flex h-[60px] w-full items-center gap-2">
         <Search size={20} className="mb-0.5 text-blue-200" />
         <C.ComboboxInput
@@ -47,7 +49,6 @@ const SearchBar = () => {
             <C.ComboboxOption
               key={item.id}
               value={item.name}
-              onClick={() => handleSelectAgent(item.id)}
               className="my-1 flex cursor-pointer items-center justify-start gap-2 rounded px-2 py-1 hover:bg-zinc-100"
             >
               <Avatar>

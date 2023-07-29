@@ -29,7 +29,7 @@ type FormProps = {
   agent: string
 }
 
-export const FormSelectAgent: React.FC<Props> = ({ data }) => {
+const FormSelectAgent: React.FC<Props> = ({ data }) => {
   const [agents, setAgents] = React.useState<AgentResponse[]>(data)
   const [loading, setLoading] = React.useState(false)
   const { ref, inView } = useInView({ threshold: 0 })
@@ -114,3 +114,5 @@ export const FormSelectAgent: React.FC<Props> = ({ data }) => {
     </form>
   )
 }
+
+export default FormSelectAgent

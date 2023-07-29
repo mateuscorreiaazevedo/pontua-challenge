@@ -5,5 +5,5 @@ export const metadata = {
 }
 
 export default function NotFound() {
-  redirect('/select-agent')
+  redirect('/')
 }

@@ -15,7 +15,7 @@ export const metadata = {
   title: 'Selecionar Agente - Pontua'
 }
 
-export default async function SelectAgent() {
+export default async function Profile() {
   let data: AgentDataResponse | undefined
 
   try {

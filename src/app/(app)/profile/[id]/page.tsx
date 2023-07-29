@@ -36,7 +36,7 @@ export default async function Agent({ params }: Props) {
   return (
     <section>
       <h1 className="text-2xl text-blue-600">
-        <Link href="/select-agent" className="font-bold">
+        <Link href="/profile" className="font-bold">
           Perfil
         </Link>
         <span className="mx-1 font-bold text-orange-500">/</span>

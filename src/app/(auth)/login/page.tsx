@@ -22,7 +22,7 @@ export default function Login() {
   const token = cookies().get('pontua.token')
 
   if (token) {
-    redirect('/select-agent')
+    redirect('/profile')
   }
 
   return (

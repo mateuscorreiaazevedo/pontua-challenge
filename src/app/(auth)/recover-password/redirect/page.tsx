@@ -17,7 +17,7 @@ export default function RecoverRedirect() {
   const token = cookies().get('pontua.token')
 
   if (token) {
-    redirect('/select-agent')
+    redirect('/profile')
   }
 
   return (
@@ -35,7 +35,7 @@ export default function RecoverRedirect() {
             senha.
           </CardDescription>
           <Link href="/login">
-            <Button className="h-16 w-full bg-blue-800 text-2xl font-bold">
+            <Button className="h-16 w-full bg-blue-800 text-2xl font-bold hover:bg-blue-600">
               voltar para o login
             </Button>
           </Link>

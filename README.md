@@ -1,122 +1,296 @@
-# *Teste Desenvolvimento Pontua Web*
+#  *Teste Desenvolvimento Pontua Web*
+
 > Esse é o teste para desenvolvedores na Pontua Web.<br>
+
 > Sinta-se livre para editar a partir do título "Documentação da Aplicação".<br>
+
 > Essa aplicação deve ser criada com base e utilização na api fornecida pela Marvel
+
 [https://developer.marvel.com/](https://developer.marvel.com/)<br>
+
 ---
+
+
 
 > Qualquer dúvida poderá ser enviada por e-mail em tecnologia@pontua.com.br;<br>
+
 > O prazo para finalização do teste deverá ser fornecido pelo RH;<br>
+
 >***Não deixe de entregar sua aplicação*** mesmo que não esteja pronta ou perfeita;<br>
+
 > A entrega do código deverá ser feita no GitHub e após o término, notificar o time atráves do e-mail tecnologia@pontua.com.br e gente@pontua.com.br.
 
+
+
 ---
+
+
 
 >Link para layout no Figma: [layout]('https://www.figma.com/file/QFEzv3O4PWCzmvicy7e7sm/Teste-de-Desenvolvimento?node-id=0-1&t=D2fOR8TxhmRi52td-0')
 
+
+
 ---
 
-## Página de Login
+
+
+##  Página de Login
+
+
 
 ***Eu como usuário:***<br>
+
 > Irei inserir o meu e-mail e senha de acesso para navegar para a tela de Agentes.
 
+
+
 ***Quando eu:***<br>
+
 > Clicar no botão entrar, se sucesso deverá navegar para a próxima tela, caso ocorra erro, ver uma notificação;<br>
+
 > informando que o email ou senha está inválido.
 
-### *Opcional*
+
+
+###  *Opcional*
+
 > Quando eu clicar deverá redirecionar para a tela de esqueci minha senha.
 
-### *Critérios de aceite*
+
+
+###  *Critérios de aceite*
+
 >- Validação de e-mail e senha;
+
 >- Navegar para próxima página;
+
 >- Exibir mensagem de erro;
+
 >- Ser o mais fiel possível ao layout do Figma.
 
 ---
 
-## Página de seleção de Agente
+##  Página de seleção de Agente
 
 ***Eu como usuário:***<br>
+
 > Irei selecionar o agente de minha escolha para acessar a página de perfil do agente.
 
 ***Quando eu:***<br>
+
 > Clicar no campo de escolha deverá ser exibido uma lista com os nomes e foto do perfil de cada agente,
+
 e ao clicar no botão entrar ser redirecionado para a tela de perfil do agente;
 
-### *Critérios de aceite*
+###  *Critérios de aceite*
+
 >- Se não houver agente selecionado mostrar o placeholder "Selecione um agente" conforme Figma;
+
 >- Se já exitir um agente selecionado e eu clicar no campo de escolha, exibir a lista de agentes com uma flag no agente;
+
 >- já selecionado;
+
 >- Ao clicar no botão entrar deverá navegar para a página de perfil do agente selecionado;
+
 >- Ser o mais fiel possível ao layout do Figma.
 
+
+
 ---
 
-## Página de Perfil de Agente
+
+
+##  Página de Perfil de Agente
+
+
 
 ***Eu como usuário:***<br>
+
 > Ao acessar a tela preciso ver a aba de visão geral com o descritivo sobre o agente,
+
 bem como seu nome e imagem;<br>
+
 > Quero poder navegar nas abas de características, conforme layout do Figma;<br>
+
 > Preciso visualizar o menu com as opções de acessar a Home, Perfil e sair do sistema.
 
+
+
 ***Quando eu:***<br>
+
 > Clicar em uma das abas disponíveis daquele agente, preciso ver uma lista com as informações daquela aba.
 
-### *Critérios de aceite*
+
+
+###  *Critérios de aceite*
+
 >- Exibir as informações dos agentes;
+
 >- As abas do perfil devem ser dinâmicas de acordo com cada agente;
+
 >- Ao clicar nas abas mostrar as listagens com as informações relativas;
+
 >- Exibir o menu lateral com link para Home, Perfil e Logout;
+
 >- Ser o mais fiel possível ao layout do Figma;
+
+
 
 ---
 
-## Página Home
+
+
+##  Página Home
+
+
 
 ***Eu como usuário:***<br>
+
 > Desejo visualizar uma lista de cards com fotos de perfil e um resumo de personagens;<br>
+
 > Quero poder navegar na lista pela paginação no final da página;<br>
+
 > Quando eu clicar no campo de pesquisa e digitar o nome do agente, me mostre somente os personagens que contém aquele termo buscado.
 
+
+
 ***Quando eu:***<br>
+
 > Clicar no card do personagem, deverei ser redirecionado para a página de perfil do personagem escolhido;<br>
+
 > Fizer uma busca, o sistema deverá exibir na lista somente os personagens que contém aquele nome.<br>
+
 > Clicar no botão "Próxima" deverá exibir os próximos cards da lista (próxima página);<br>
+
 > Clicar no botão "Anterior" deverá exibir os cards anteriores da lista (página anterior);<br>
+
 > Quando eu clicar no botão com número de páginação, exibir os cards relativos aquela página selecionada.<br>
 
-### *Critérios de aceite*
+
+
+###  *Critérios de aceite*
+
 >- Exibir resumo e foto de perfil;
+
 >- Listagem mínima de 11 personagens
+
 >- Exibição de no mínimo na primeira página
+
 >- Exibição de no máximo 10 personagens por página;
+
 >- Ao clicar em um card ser redirecionado à página de perfil do mesmo;
+
 >- Ser o mais fiel possível ao layout do Figma;
+
+
 
 ---
 
-># *Opcional* *
-## Página Recuperação de Senha
+
+
+>#  *Opcional* *
+
+##  Página Recuperação de Senha
+
+
 
 ***Eu como usuário:***<br>
+
 > Irei inserir o email que realizei o cadastro na plataforma no campo disponivel e, clicarei no botão enviar link.
 
+
+
 ***Quando eu:***<br>
+
 > Clicar no botão de enviar link, deverá aparecer a mensagem de envio com sucesso.
 
-### *Critérios de aceite*
+
+
+###  *Critérios de aceite*
+
 >- Ser o mais fiel possível ao layout do Figma;
+
+
 
 ---
 
-# Documentação da Aplicação
+
+
+#  Documentação da Aplicação
+
+
 
 
 >Você pode escrever a documentação da sua aplicação a partir daqui...
->
 
+ ---
+## Seção 1: Instalação das Dependências
 
----
+>Para executar a aplicação front-end, você precisará clonar o repositório e instalar suas dependências. Siga as etapas abaixo para realizar a instalação:
+
+ 1. Clone o repositório da aplicação do GitHub, utilizando o seguinte comando no terminal:
+```
+git clone https://github.com/mateuscorreiaazevedo/pontua-challenge.git pontua-challenge-mateuscorreiaazevedo
+```
+2. Navegue até o diretório da aplicação:
+```
+cd pontua-challenge-mateuscorreiaazevedo
+```
+3. Agora, instale as dependências necessárias usando npm ou Yarn. Escolha um dos seguintes comandos:
+
+Utilizando npm:
+```
+npm install
+```
+Utilizando Yarn:
+```
+yarn
+```
+
+## Seção 2: Configuração do Arquivo .env
+>Antes de iniciar a aplicação, é necessário configurar o arquivo `.env` no diretório raiz do projeto. Este arquivo é usado para armazenar variáveis de ambiente, incluindo chaves de API e outras configurações sensíveis.
+
+### Siga os passos abaixo para configurar o arquivo `.env` corretamente:
+
+1. Acesse [https://developer.marvel.com/account](https://developer.marvel.com/account) para criar uma conta e obter as chaves de API da Marvel (PUBLIC_KEY e PRIVATE_KEY).
+2. Crie um arquivo chamado `.env` no diretório raiz do projeto e abra-o em um editor de texto.
+3. Insira as chaves de API obtidas da Marvel no arquivo `.env`, substituindo `<sua-chave-publica>` e `<sua-chave-privada>` pelas respectivas chaves fornecidas:
+```
+NEXT_PUBLIC_PUBLIC_KEY=<sua-chave-publica>
+NEXT_PRIVATE_KEY=<sua-chave-privada>
+```
+4. Para a geração de tokens JWT, você precisará definir uma chave secreta (`JWT_SECRET`) para assinar e verificar os tokens. Esta chave deve ser aleatória e segura. Certifique-se de não compartilhar essa chave publicamente.
+```
+JWT_SECRET=<chave-secreta-aleatoria>
+```
+5. Salve o arquivo `.env`
+> As variáveis definidas no arquivo `.env` serão acessíveis em tempo de execução pela aplicação front-end.
+- **Nota:** Lembre-se de não versionar o arquivo `.env` em seu controle de código-fonte, pois ele contém informações sensíveis. Certifique-se de adicioná-lo ao `.gitignore` para evitar o risco de expor suas chaves de API e outras informações confidenciais.
+## Seção 3: Iniciar a Aplicação
+>Agora que você configurou corretamente o arquivo `.env` com as chaves de API da Marvel e a chave secreta para geração de tokens JWT, está pronto para iniciar a aplicação.
+
+- Utilize os seguintes comandos para iniciar a aplicação localmente em modo de desenvolvimento:
+
+**Utilizando npm:**
+```
+npm run dev
+```
+**Utilizando Yarn:**
+```
+yarn dev
+```
+
+Após executar o comando acima, a aplicação estará disponível em [localhost](http://localhost:3000) no seu navegador.
+
+## Seção 4: Dados de Mocks de Usuário
+
+>A aplicação utiliza dados de mocks de usuário para fins de teste durante o desenvolvimento. Abaixo estão os detalhes dos usuários disponíveis:
+
+1.  **Usuário Admin:**
+    -   Email: [admin@pontua.com.br](mailto:admin@pontua.com.br)
+    -   Senha: admin.Pontua123
+2.  **Usuário Comum:**
+    -   Email: [user@email.com](mailto:user@email.com)
+    -   Senha: Teste123
+
+- **Estes são apenas dados de TESTE e NÃO DEVEM SER USADOS em ambientes de produção.**

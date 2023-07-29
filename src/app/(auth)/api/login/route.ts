@@ -1,16 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { usersConstants } from '@/modules/auth'
 import jwt from 'jsonwebtoken'
-
-const users: LoginProps[] = [
-  {
-    email: 'admin@pontua.com.br',
-    password: 'admin.Pontua123'
-  },
-  {
-    email: 'user@email.com',
-    password: 'Teste123.'
-  }
-]
 
 export async function POST(req: NextRequest) {
   const body = await req.json()
@@ -27,10 +17,10 @@ export async function POST(req: NextRequest) {
     })
   }
 
-  const verifyUser = users.find(item => item.email === email)
+  const verifyUser = usersConstants.find(item => item.email === email)
 
   if (!verifyUser) {
-    return NextResponse.json('Endereço de email não cadastrado.', {
+    return NextResponse.json('Usuário ou senha inválido.', {
       status: 404
     })
   }
@@ -38,7 +28,7 @@ export async function POST(req: NextRequest) {
   const token = jwt.sign({ email }, process.env.JWT_SECRET!, { expiresIn: '30d' })
 
   if (!verifyPassword) {
-    return NextResponse.json('Senha inválida.', {
+    return NextResponse.json('Usuário ou senha inválida.', {
       status: 422
     })
   }

@@ -34,9 +34,11 @@ export default function AppLayout({ children }: { children: ReactNode }) {
           </NavLink>
         </nav>
         <Separator className="mb-2 w-full" />
-        <NavLink link="/api/logout" asAnchor>
-          <CornerUpLeft /> Sair
-        </NavLink>
+        <div className="px-6">
+          <NavLink link="/api/logout" asAnchor>
+            <CornerUpLeft /> Sair
+          </NavLink>
+        </div>
         <Separator className="mt-2 w-full" />
         <ul className="flex h-full w-full flex-1 flex-col items-start justify-end px-6 py-4">
           <NavLink

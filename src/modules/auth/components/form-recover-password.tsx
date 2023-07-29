@@ -1,5 +1,6 @@
 'use client'
 
+import { authService } from '../services/auth-service'
 import { Button, Input } from '@/modules/core'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
@@ -8,11 +9,13 @@ import toast from 'react-hot-toast'
 import React from 'react'
 
 export const FormRecoverPassword = () => {
-  const { handleSubmit, register } = useForm()
+  const { handleSubmit, register } = useForm<RecoverPasswordProps>()
   const router = useRouter()
 
-  const handleRecoverPassword = async () => {
+  const handleRecoverPassword = async ({ email }: RecoverPasswordProps) => {
     try {
+      const response = await authService.recoverPassword({ email })
+      toast.success(response)
       router.push('/recover-password/redirect')
     } catch (error) {
       toast.error((error as any).message)

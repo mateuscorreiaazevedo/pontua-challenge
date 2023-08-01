@@ -18,6 +18,7 @@ export const FormLogin = () => {
       const response = await authService.login({ email, password })
       toast.success(response)
       router.push('/profile')
+      router.refresh()
     } catch (error) {
       toast.error((error as any).message)
     }
